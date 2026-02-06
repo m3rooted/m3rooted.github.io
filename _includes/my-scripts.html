@@ -5,9 +5,31 @@
 {% endif %}
 
 <script>
+  function show_utterances_fallback(container, message) {
+    if (!container) {
+      return;
+    }
+
+    if (container.querySelector(".utterances-fallback")) {
+      return;
+    }
+
+    var fallback = document.createElement("p");
+    fallback.className = "utterances-fallback";
+    fallback.textContent = message;
+    container.appendChild(fallback);
+  }
+
   function load_utterances() {
     var container = document.getElementById("utterances-container");
     if (!container) {
+      return;
+    }
+
+    var repo = container.dataset.utterancesRepo;
+    if (!repo) {
+      container.setAttribute("aria-busy", "false");
+      show_utterances_fallback(container, "Comments are not configured.");
       return;
     }
 
@@ -18,7 +40,7 @@
     var script = document.createElement("script");
     script.src = "https://utteranc.es/client.js";
     script.async = true;
-    script.setAttribute("repo", container.dataset.utterancesRepo);
+    script.setAttribute("repo", repo);
     script.setAttribute("issue-term", container.dataset.utterancesIssueTerm || "pathname");
 
     if (container.dataset.utterancesLabel) {
@@ -30,6 +52,13 @@
     }
 
     script.setAttribute("crossorigin", "anonymous");
+    script.onload = function () {
+      container.setAttribute("aria-busy", "false");
+    };
+    script.onerror = function () {
+      container.setAttribute("aria-busy", "false");
+      show_utterances_fallback(container, "Failed to load comments.");
+    };
     container.appendChild(script);
   }
 

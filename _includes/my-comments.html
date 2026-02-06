@@ -30,24 +30,27 @@
     <div id="utterances-container"
          data-utterances-repo="{{ utterances.repo }}"
          data-utterances-issue-term="{{ utterances.issue-term | default: 'pathname' }}"
-         data-utterances-label="{{ utterances.label }}"
-         data-utterances-theme="{{ utterances.theme }}">
+         {% if utterances.label %}data-utterances-label="{{ utterances.label }}"{% endif %}
+         {% if utterances.theme %}data-utterances-theme="{{ utterances.theme }}"{% endif %}
+         aria-live="polite"
+         aria-busy="true">
     </div>
+    <noscript>Comments require JavaScript to load.</noscript>
   {% endif %}
 {% elsif provider == "giscus" %}
   {% assign giscus = site.giscus %}
   {% if giscus.repo %}
     <script src="https://giscus.app/client.js"
-            data-repo={{ giscus.repo }}
-            data-repo-id={{ giscus.repo-id }}
-            data-category={{ giscus.category }}
-            data-category-id={{ giscus.category-id }}
-            data-mapping={{ giscus.mapping }}
-            data-reactions-enabled={{ giscus.reaction-enabled }}
-            data-emit-metadata={{ giscus.data-emit-metadata }}
-            data-theme={{ giscus.theme }}
-            data-lang={{ giscus.data-lang }}
-            crossorigin={{ giscus.crossorigin }}
+            data-repo="{{ giscus.repo }}"
+            data-repo-id="{{ giscus.repo-id }}"
+            data-category="{{ giscus.category }}"
+            data-category-id="{{ giscus.category-id }}"
+            data-mapping="{{ giscus.mapping }}"
+            data-reactions-enabled="{{ giscus.reaction-enabled }}"
+            data-emit-metadata="{{ giscus.data-emit-metadata }}"
+            data-theme="{{ giscus.theme }}"
+            data-lang="{{ giscus.data-lang }}"
+            crossorigin="{{ giscus.crossorigin }}"
             async>
     </script>
   {% endif %}
