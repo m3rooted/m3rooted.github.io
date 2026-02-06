@@ -36,8 +36,13 @@
   document
     .getElementById("_pushState")
     .addEventListener("hy-push-state-load", function () {
-      get_clap_count();
-      apply_lightbox();
+      if (typeof get_clap_count === "function") {
+        get_clap_count();
+      }
+
+      if (typeof apply_lightbox === "function") {
+        apply_lightbox();
+      }
       load_utterances();
     });
 

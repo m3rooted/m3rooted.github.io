@@ -5,6 +5,7 @@ permalink: /about/
 more_posts: posts.md
 sidebar: false
 order: 1
+comments: true
 ---
 
 ## "Hello, World!"
