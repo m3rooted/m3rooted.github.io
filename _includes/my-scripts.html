@@ -5,10 +5,41 @@
 {% endif %}
 
 <script>
+  function load_utterances() {
+    var container = document.getElementById("utterances-container");
+    if (!container) {
+      return;
+    }
+
+    if (container.querySelector("iframe.utterances-frame") || container.querySelector("script[src*='utteranc.es']")) {
+      return;
+    }
+
+    var script = document.createElement("script");
+    script.src = "https://utteranc.es/client.js";
+    script.async = true;
+    script.setAttribute("repo", container.dataset.utterancesRepo);
+    script.setAttribute("issue-term", container.dataset.utterancesIssueTerm || "pathname");
+
+    if (container.dataset.utterancesLabel) {
+      script.setAttribute("label", container.dataset.utterancesLabel);
+    }
+
+    if (container.dataset.utterancesTheme) {
+      script.setAttribute("theme", container.dataset.utterancesTheme);
+    }
+
+    script.setAttribute("crossorigin", "anonymous");
+    container.appendChild(script);
+  }
+
   document
     .getElementById("_pushState")
     .addEventListener("hy-push-state-load", function () {
       get_clap_count();
       apply_lightbox();
+      load_utterances();
     });
+
+  load_utterances();
 </script>

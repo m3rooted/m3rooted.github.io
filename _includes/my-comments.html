@@ -27,14 +27,12 @@
 {% elsif provider == "utterances" %}
   {% assign utterances = site.utterances %}
   {% if utterances.repo %}
-    <script src="https://utteranc.es/client.js"
-            repo={{ utterances.repo }}
-            issue-term={{ utterances.issue-term }}
-            label={{ utterances.label }}
-            theme={{ utterances.theme }}
-            crossorigin= "anonymous"
-            async>
-    </script>
+    <div id="utterances-container"
+         data-utterances-repo="{{ utterances.repo }}"
+         data-utterances-issue-term="{{ utterances.issue-term | default: 'pathname' }}"
+         data-utterances-label="{{ utterances.label }}"
+         data-utterances-theme="{{ utterances.theme }}">
+    </div>
   {% endif %}
 {% elsif provider == "giscus" %}
   {% assign giscus = site.giscus %}

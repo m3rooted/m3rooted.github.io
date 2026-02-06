@@ -37,6 +37,9 @@ tagline:               >
 # A list of keywords for your blog
 keywords:              ["Information Security", "RedTeam", "BlueTeam", "SOC"]
 
+# Google Search Console verification
+google_site_verification: google3b0388fcac4717cd.html
+
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
