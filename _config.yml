@@ -170,6 +170,12 @@ defaults:
        applause_button:       true
        layout:          post   
 
+  # Ensure SOC posts always include comments.
+  - scope:
+      path:            _posts/soc
+    values:
+      comments:        true
+
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
   # but we want them to be `WebPage`s:
   - scope:
