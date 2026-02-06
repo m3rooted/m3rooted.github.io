@@ -194,7 +194,22 @@ kramdown:
   footnote_backlink:   '&#x21a9;&#xfe0e;'
 
 comments:
-  provider:            utterances
+  provider:            giscus
+
+giscus:
+  repo:                m3rooted/m3rooted.github.io
+  repo-id:             R_kgDORKDG1g
+  category:            General
+  category-id:         DIC_kwDORKDG1s4C1_N4
+  mapping:             pathname
+  reaction-enabled:    "1"
+  data-emit-metadata:  "0"
+  input-position:      bottom
+  theme:               dark
+  data-lang:           en
+  data-loading:        lazy
+  data-strict:         "0"
+  crossorigin:         anonymous
 
 utterances:
   repo:                m3rooted/0x-orca.github.io

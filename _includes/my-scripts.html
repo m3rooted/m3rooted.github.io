@@ -5,6 +5,7 @@
 {% endif %}
 
 <script>
+  {% if site.comments.provider == "utterances" %}
   function show_utterances_fallback(container, message) {
     if (!container) {
       return;
@@ -76,4 +77,5 @@
     });
 
   load_utterances();
+  {% endif %}
 </script>
