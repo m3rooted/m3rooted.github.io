@@ -4,7 +4,7 @@ basics:
   picture: /assets/img/AVT.jpeg
   email: "dgquang2k5@gmail.com"
   phone: (+84) 347-281-005
-  website: "https://********.github.io/"
+  website: "https://m3rooted.github.io/"
   summary: >
     Information security enthusiast and IT student, has knowledge of web application, network security, network solutions (Firewall, IPS, WAF, ...), actively hone skills on the Hackthebox (HTB) and Tryhackme (THM) platforms
   # location:
@@ -47,6 +47,7 @@ education:
     highlights:
       - "Purple Team - Active Directory and AzureAD v1"
       - "AV/EDR Evasion Practical Techniques" 
+      - "Introduction to Python for Defensive Security"
   - institution: "Microsoft Learn"
     website: "https://learn.microsoft.com/"
     startDate: "2025-08-01"
