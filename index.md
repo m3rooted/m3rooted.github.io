@@ -15,7 +15,7 @@ author: author1
 
 ## 👨‍💻 About Me
 
-I am an **Information Security student** with a strong interest in **Blue Team operations**, including **threat detection**, **log analysis**, **incident response**, and **digital forensics**.
+I am an **Information Technology student** with a strong interest in **Blue Team operations**, including **threat detection**, **log analysis**, **incident response**, and **digital forensics**.
 
 I focus on building **defensive security** skills through **hands-on labs**, **security monitoring**, and **analysis of real-world attack techniques**. I also value **clear, well-structured technical documentation**, as I believe good security work should be both effective and well-communicated.
 
