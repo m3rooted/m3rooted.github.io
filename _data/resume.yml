@@ -47,16 +47,20 @@ education:
     highlights:
       - "Purple Team - Active Directory and AzureAD v1"
       - "AV/EDR Evasion Practical Techniques" 
+      - "Foundations of Log Analysis for Cyber Defense"
+      - "OpSec & Anonymity for Red Teams"
+      - "Cyber Security Architecture v1"
+      - "Offensive Development Introduction for Windows v1"
       - "Introduction to Python for Defensive Security"
-  - institution: "Microsoft Learn"
-    website: "https://learn.microsoft.com/"
-    startDate: "2025-08-01"
-    endDate: 
-    summary: "Licenses and certifications"
-    highlights:
-      - "Describe threat protection with Microsoft Defender XDR"
-      - "Mitigate incidents using Microsoft Defender"
-      - "Safeguard your environment with Microsoft Defender for Identity"
+  # institution: "Microsoft Learn"
+    #website: "https://learn.microsoft.com/"
+    #startDate: "2025-08-01"
+    #endDate: 
+    #summary: "Licenses and certifications"
+    #highlights:
+      #- "Describe threat protection with Microsoft Defender XDR"
+      #- "Mitigate incidents using Microsoft Defender"
+      #- "Safeguard your environment with Microsoft Defender for Identity"
 # volunteer:
 #   - organization: 
 #     position: 
@@ -73,6 +77,15 @@ education:
 #     summary: 
 #     highlights:
 projects:
+  - title: "CryptXfer"
+    url: "https://github.com/m3rooted/CryptXfer"
+    summary: "Secure file transfer tool with end-to-end encryption, integrity checks, and a Tkinter GUI."
+    highlights:
+      - "AES-256-CBC encryption with random salt and IV per transfer"
+      - "PBKDF2-HMAC-SHA256 key derivation with 100,000 iterations"
+      - "HMAC-SHA256 integrity verification to prevent tampering"
+      - "Input validation for password length and port range"
+      - "Built-in 1GB file size limit to mitigate basic DoS"
   - title: "netsnif"
     startDate: "2026-01-02"
     endDate: "2026-01-14"
@@ -117,6 +130,15 @@ projects:
 #     url:
 #     highlights:
 awards:
+  - title: "Certified Threat Intelligence & Governance Analyst (CTIGA)"
+    awarder: "CTIGA"
+    date: "2026-02-10"
+    summary: |
+      - Exam passed with a score of 92% (first attempt, coupon CTIGA100OFF).
+      - Validates ability to design, manage, and operationalize threat intelligence aligned with governance, risk, and strategic security objectives.
+      - Emphasizes intelligence lifecycle management, legal and ethical considerations, and integration across SOC, IR, risk, and executive leadership.
+      - Focuses on frameworks and best practices to ensure intelligence supports business priorities and compliance.
+    highlights:
   - title: "Cisco Certified Network Associate v7"
     awarder: "Cisco Netacad"
     date: "2025-01-01"
