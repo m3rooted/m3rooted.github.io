@@ -3,7 +3,7 @@ layout: post
 title: "Foundations of log Analysis"
 subtitle: "Foundations for Blue Team Visibility"
 category: soc
-tags: logs blue-team siem detection siem
+tags: logs blue-team siem detection
 titles_from_headings: false
 ---
 
