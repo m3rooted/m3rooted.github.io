@@ -27,32 +27,7 @@ and for mapping protocols, devices, and responsibilities to specific layers.
 
 ## OSI Layer Flow Diagram
 
-```mermaid
-flowchart LR
-  subgraph A[Host A]
-    A7[Layer 7: Application]
-    A6[Layer 6: Presentation]
-    A5[Layer 5: Session]
-    A4[Layer 4: Transport]
-    A3[Layer 3: Network]
-    A2[Layer 2: Data Link]
-    A1[Layer 1: Physical]
-    A7 --> A6 --> A5 --> A4 --> A3 --> A2 --> A1
-  end
-
-  subgraph B[Host B]
-    B7[Layer 7: Application]
-    B6[Layer 6: Presentation]
-    B5[Layer 5: Session]
-    B4[Layer 4: Transport]
-    B3[Layer 3: Network]
-    B2[Layer 2: Data Link]
-    B1[Layer 1: Physical]
-    B1 --> B2 --> B3 --> B4 --> B5 --> B6 --> B7
-  end
-
-  A1 --- B1
-```
+![OSI model layer flow diagram](/assets/img/2024-06-08/osimodel.png)
 
 ## OSI Model: 7-Layer Structure
 

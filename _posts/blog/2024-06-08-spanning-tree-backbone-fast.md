@@ -16,26 +16,7 @@ Backbone Fast is used to recover from an indirect link failure. What does that m
 
 ## Scenario Overview
 
-```mermaid
-flowchart TD
-    SW1["SW1 (switch)<br/>ROOT<br/>Priority 32768<br/>MAC: AAA"]
-    SW2["SW2 (switch)<br/>NON-ROOT<br/>Priority 32768<br/>MAC: BBB"]
-    SW3["SW3 (switch)<br/>NON-ROOT<br/>Priority 32768<br/>MAC: CCC"]
-
-    SW1 ---|"Fa0/14 (SW1 D, SW2 R)"| SW2
-    SW1 ---|"Fa0/17 (SW1 D, SW3 R)"| SW3
-    SW2 -.-|"Fa0/16 (SW2 D, SW3 ND - blocked)"| SW3
-
-    X((X))
-    SW2 --- X --- SW3
-
-    classDef root fill:#cfe8ff,stroke:#2563eb,stroke-width:1px,color:#111;
-    classDef nonroot fill:#e7f8e7,stroke:#16a34a,stroke-width:1px,color:#111;
-    classDef down fill:#fee2e2,stroke:#dc2626,stroke-width:1px,color:#111;
-    class SW1 root;
-    class SW2,SW3 nonroot;
-    class X down;
-```
+![Backbone Fast topology diagram](/assets/img/2024-06-08/spanning.png)
 
 SW1 is the root bridge. The Fa0/16 interface on SW3 is blocked. Suddenly the link between SW1 and SW2 fails. From SW3's perspective, this is an indirect link failure.
 
