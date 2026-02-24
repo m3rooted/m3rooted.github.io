@@ -1,8 +1,8 @@
 ---
 layout: tag-list
 type: tag
-title: Self-Dev
-slug: self-dev
+title: CTF-Archive
+slug: ctf-archive
 category: ctf
 sidebar: true
 description: >
