@@ -1,22 +1,14 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
-#
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
-# gem "jekyll", "~> 3.9"
+source "https://rubygems.org"
 
-group :jekyll_plugins do
-  gem 'github-pages'
-  gem 'jekyll-include-cache'
-  gem 'jekyll-compose'
+gem "jekyll-theme-chirpy", "~> 7.3", ">= 7.3.1"
+
+gem "html-proofer", "~> 5.0", group: :test
+
+platforms :mingw, :x64_mingw, :mswin, :jruby do
+  gem "tzinfo", ">= 1", "< 3"
+  gem "tzinfo-data"
 end
 
-gem 'wdm' if Gem.win_platform?
-gem 'tzinfo-data' if Gem.win_platform?
-
-gem "webrick", "~> 1.9"
+gem "wdm", "~> 0.2.0", :platforms => [:mingw, :x64_mingw, :mswin]
