@@ -6,5 +6,5 @@ slug: ctf-archive
 category: ctf
 sidebar: true
 description: >
-   As a way to develop my own skills, I build machines containing vulnerabilities as well as methods to exploit them.
+   I build vulnerable CTF machines and write exploit chains from foothold to root/Admin.
 ---
