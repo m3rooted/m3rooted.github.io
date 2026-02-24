@@ -6,5 +6,5 @@ slug: ctf-archive
 category: ctf
 sidebar: true
 description: >
-   I build vulnerable CTF machines and write exploit chains from foothold to root/Admin.
+   This section is dedicated to posting some of the CTF competitions I have completed.
 ---
