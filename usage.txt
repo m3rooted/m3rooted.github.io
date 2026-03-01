@@ -1,0 +1,27 @@
+for new installation:
+Step 1: Install ruby
+Step 2: Install bundler => gem install bundler
+Step 3: Install required package and sth like that => bundle install in the root folder 
+
+
+run local: bundle exec Jekyll serve
+
+push to GitHub:
+git add .
+git commit -m 'hehe'
+git push origin main
+
+
+
+> An example showing the `tip` type prompt.
+{: .prompt-tip }
+
+> An example showing the `info` type prompt.
+{: .prompt-info }
+
+> An example showing the `warning` type prompt.
+{: .prompt-warning }
+
+> An example showing the `danger` type prompt.
+{: .prompt-danger }
+
