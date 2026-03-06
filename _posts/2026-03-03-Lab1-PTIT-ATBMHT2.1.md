@@ -1,5 +1,5 @@
 ---
-title: (Vietnamese) ATBMHTTT CN04 | PTIT-Lab 2.2 TCP 3-way Handshake, SYN Flood
+title: (Vietnamese) ATBMHTTT CN04 | PTIT-Lab 2.1 TCP 3-way Handshake, SYN Flood
 date: 2026-03-03 23:59:00 +0700
 categories: [Analysis]
 tags: [SYN FLOOD, TCP 3-way Handshake]
