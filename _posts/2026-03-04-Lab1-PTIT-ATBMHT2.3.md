@@ -1,5 +1,6 @@
 ---
 title: (Vietnamese) ATBMHTTT CN04 | PTIT-Lab 2.3 The most effective SYN Flood defense measures in 2025
+date: 2026-03-04 12:00:00 +0700
 categories: [Analysis]
 tags: [SYN FLOOD, SYN Cookies, SYN Proxy, Rate Limiting, iptables, nftables]
 
