@@ -1,6 +1,6 @@
 ---
 title: (Vietnamese) ATBMHTTT CN04 | PTIT-Lab 2.2 Perform attacks using hping3 [SYN FLOOD]
-date: 2026-03-06 10:38:00 +0700
+date: 2026-03-05 23:59:00 +0700
 categories: [Analysis]
 tags: [SYN FLOOD, Hping3, Python]
 
