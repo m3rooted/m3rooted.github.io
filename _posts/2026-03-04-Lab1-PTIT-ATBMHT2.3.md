@@ -99,7 +99,7 @@ Chỉ kích hoạt khi backlog gần đầy
 
 SYN Proxy là kỹ thuật trong firewall hoặc load balancer, trong đó firewall đứng ra thực hiện bắt tay TCP thay server. Chỉ khi client hoàn tất handshake hợp lệ, firewall mới chuyển kết nối đến server thật.
 
-```Bash
+```bash
 Attacker/Client -> SYN ------> Firewall SYN Proxy
 Firewall        -> SYN-ACK --> Client
 Client          -> ACK ------> Firewall
@@ -121,7 +121,7 @@ nft add rule inet filter input tcp dport {80,443} synproxy mss 1460 wscale 7 tim
 
 Mẫu cấu hình với iptables SYNPROXY
 
-```Bash
+```bash
 sudo modprobe nf_conntrack
 sudo modprobe nf_synproxy_core
 
@@ -148,7 +148,7 @@ Biện pháp này sử dụng firewall để giới hạn số lượng gói SYN
 
 Ví dụ Rate Limiting bằng iptables và nftables
 
-```Bash
+```bash
 # Cho phép tối đa 25 SYN/giây, burst 50 cho HTTP/HTTPS
 sudo iptables -A INPUT -p tcp -m multiport --dports 80,443 --syn \
   -m limit --limit 25/second --limit-burst 50 -j ACCEPT
@@ -161,7 +161,7 @@ sudo iptables -A INPUT -p tcp -m multiport --dports 80,443 --syn \
 sudo iptables -A INPUT -p tcp -m multiport --dports 80,443 --syn -j DROP
 ```
 
-```Bash
+```bash
 sudo nft add table inet ddos
 
 sudo nft 'add chain inet ddos input { type filter hook input priority 0; policy accept; }'
@@ -172,7 +172,7 @@ sudo nft add rule inet ddos input tcp dport {80,443} tcp flags syn counter drop
 
 Ví dụ giới hạn số kết nối/IP
 
-```Bash
+```bash
 iptables -A INPUT -p tcp --dport 80 \
 -m connlimit --connlimit-above 50 -j REJECT
 ```
@@ -195,7 +195,7 @@ Nhờ sử dụng mạng Anycast và scrubbing center, các dịch vụ này có
 
 Mẫu Kiến trúc
 
-```Text
+```bash
 Internet
    |
    v
@@ -213,14 +213,15 @@ Internet
 
 Kiểm tra Shield qua CLI
 
-```Bash
+```bash
 aws shield describe-subscription
 ```
 Liệt kê các tài nguyên đang được bảo vệ
 
-```Bash
+```bash
 aws shield list-protections
 ```
+
 **Ưu điểm**
 
 Chống được DDoS lớn
