@@ -271,6 +271,8 @@ def gf_to_bytes(g):
 BZHCTF{encore_et_toujours_de_la_faute_du_stagiaire_350cd55e8bf628ea}
 ```
 
+![Admin page containing the flag]({{ '/assets/img/2025-05-23-BreizhCTF2025/aut2.png' | relative_url }})
+
 ## Takeaways
 
 1. AES-GCM is fragile when implemented manually: one missed inc32 is enough to break authenticity.
