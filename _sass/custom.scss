@@ -20,6 +20,21 @@
   }
 }
 
+/* ============== Post cover image ============ */
+article > header .preview-img,
+article > header img.preview-img {
+  aspect-ratio: auto;
+  height: auto;
+}
+
+article > header .preview-img > img,
+article > header img.preview-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 /* ===================================================================
    Inline code ONLY (yellow pill). Không đụng đến code block.
    =================================================================== */

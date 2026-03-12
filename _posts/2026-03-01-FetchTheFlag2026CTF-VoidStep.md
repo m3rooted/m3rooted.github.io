@@ -5,7 +5,7 @@ categories: [Write-up]
 tags: [CTF, Forensics, PCAP, Wireshark, English]
 
 image:
-  path: /assets/img/2026-03-01-FetchTheFlag2026CTF/fetch.png
+  path: /assets/img/2026-03-01-FetchTheFlag2026CTF/fetch.png?v=2
 
 description: "My write-up for the Fetch The Flag 2026 easy forensics challenge Voidstep, where I analyzed a PCAP in Wireshark, identified decoy-host reconnaissance and the real attacker IP, traced enumeration and file-read abuse, and reconstructed the attack timeline."
 ---
