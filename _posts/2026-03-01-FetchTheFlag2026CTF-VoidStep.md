@@ -310,13 +310,3 @@ After analyzing the PCAP and reconstructing the attack, the flag can be found by
 2. In the PCAP, locate the HTTP response to the request `/read?file=/home/zoro/.ssh/authorized_keys`.
 3. The flag is typically embedded in the contents of the `authorized_keys` file or another sensitive file accessed by the attacker.
 4. Extract the flag string from the file content shown in the HTTP response payload.
-
-**Example (hypothetical):**
-
-```
-flag{lfi_and_pcap_analysis_success}
-```
-
-If the flag is not in `authorized_keys`, check other files accessed via LFI, such as `/etc/passwd` or any custom flag file mentioned in the challenge description.
-
-
