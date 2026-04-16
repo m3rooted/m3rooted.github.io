@@ -14,7 +14,7 @@ description: "My write-up for the Verilicious medium crypto challenge, where I a
 
 This challenge shows us the working of a Linear Congruential Generator (LCG) and exactly why it isn’t secure for cryptography.
 
-File lcg.txt:
+File `lcg.txt`:
 
 ```lcg
 We're using a Linear Congruential Generator (LCG) defined as:
@@ -34,3 +34,7 @@ The flag was encrypted by XORing it with output_5 (used as a 4-byte repeating ke
 
   ciphertext (hex) = 3cff226828ec3f743bb820352aff1b7021b81b623cff31767ad428672ef6
 ```
+
+# Solution
+
+The LCG algorithm operates based on a single calculation:
