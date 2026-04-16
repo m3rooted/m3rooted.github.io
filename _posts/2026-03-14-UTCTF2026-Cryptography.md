@@ -79,3 +79,34 @@ print(xor(ct, x5.to_bytes(4, 'big')))
 ```text
 utflag{pr3d1ct_th3_futur3_lcg}
 ```
+
+## Oblivious Error
+
+## Smooth Criminal
+
+This challenge is based on the Discrete Logarithm Problem (DLP). To approach it, the key idea is to determine the exponent $a$ from the relation
+
+$$
+g^a \equiv h \quad (\mathrm{mod}\ p).
+$$
+
+Thus, the main task is to transform the given data into this form and then apply an appropriate method to solve for $a$.
+
+File `dlp.txt`:
+
+```text
+The flag has been encoded as a secret exponent x, where:
+
+  h = g^x mod p
+
+Your job: find x. Convert it from integer to bytes to get the flag.
+
+p = 1363402168895933073124331075716158793413739602475544713040662303260999503992311247861095036060712607168809958344896622485452229880797791800555191761456659256252204001928525518751268009081850267001
+g = 223
+h = 1009660566883490917987475170194560289062628664411983200474597006489640893063715494610197294704009188265361176318190659133132869144519884282668828418392494875096149757008157476595873791868761173517
+```
+
+{: file="dlp.txt" }
+
+**Solution**
+
