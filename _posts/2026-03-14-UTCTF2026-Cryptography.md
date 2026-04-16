@@ -16,7 +16,7 @@ This challenge shows us the working of a Linear Congruential Generator (LCG) and
 
 File `lcg.txt`:
 
-```lcg
+```text
 We're using a Linear Congruential Generator (LCG) defined as:
 
   x_(n+1) = (a * x_n + c) % m
@@ -35,6 +35,8 @@ The flag was encrypted by XORing it with output_5 (used as a 4-byte repeating ke
   ciphertext (hex) = 3cff226828ec3f743bb820352aff1b7021b81b623cff31767ad428672ef6
 ```
 
-# Solution
+{: file="lcg.txt" }
+
+**Solution**
 
 The LCG algorithm operates based on a single calculation:
