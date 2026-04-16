@@ -12,7 +12,7 @@ description: "My write-up for the Verilicious medium crypto challenge, where I a
 
 ## Fortune Teller
 
-This challenge shows us the working of a Linear Congruential Generator (LCG) and exactly why it isn’t secure for cryptography.
+This challenge shows us the working of a Linear Congruential Generator (LCG) and exactly why it isn’t secure for cryptography. It is one of the oldest and most widely used algorithms for generating pseudorandom numbers.
 
 File `lcg.txt`:
 
@@ -39,4 +39,43 @@ The flag was encrypted by XORing it with output_5 (used as a 4-byte repeating ke
 
 **Solution**
 
+Before solving this problem, one needs only a basic understanding of group theory, particularly multiplicative inverses. In modular arithmetic modulo $m$, the inverse of an integer $p$ is an integer $q$ such that $pq \equiv 1 \pmod m$. With this concept, the analysis reduces to modular manipulations that allow recovery of $a$ and $c$.
+
 The LCG algorithm operates based on a single calculation:
+
+$$
+X_{n+1} = (a \cdot X_n + c)\ (\mathrm{mod}\ m)
+$$
+
+Now that we have $a$, recovering $c$ is trivial.
+
+$$
+c \equiv x_2 - a \cdot x_1 \pmod m
+$$
+
+You might have noticed that we needed only 3 outputs to recover $a$ and $c$.
+
+**Exploitation script**
+
+```python
+from pwn import *
+
+m = 4294967296
+x = [4176616824, 2681459949, 1541137174, 3272915523]
+ct = bytes.fromhex("3cff226828ec3f743bb820352aff1b7021b81b623cff31767ad428672ef6") #ciphertext = ct
+
+d1 = (x[1] - x[0]) % m
+d2 = (x[2] - x[1]) % m
+
+a = (d2 *pow(d1,-1,m)) % m
+c = (x[1] - a * x[0]) % m
+x5 = (a * x[3] + c) % m
+
+print(xor(ct, x5.to_bytes(4, 'big')))
+```
+
+**Flag**
+
+```text
+utflag{pr3d1ct_th3_futur3_lcg}
+```
