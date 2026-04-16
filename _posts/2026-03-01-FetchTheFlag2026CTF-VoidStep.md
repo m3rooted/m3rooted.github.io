@@ -14,24 +14,7 @@ description: "My write-up for the Fetch The Flag 2026 easy forensics challenge V
 
 You're a SOC analyst at Sfax-Tech. Your team lead rushes in: "A client server triggered multiple alerts. The system isolated it and saved the traffic." She hands you a USB with a PCAP file. Find out what happened. Time is critical.
 
-## Skills Required
-
-- Basic network protocol analysis with Wireshark (TCP, HTTP, and IP conversations).
-- Ability to use display filters to isolate attacker and target traffic.
-- Understanding of common recon and brute-force patterns (Nmap, Gobuster, and login attempts).
-- Familiarity with web request/response structure and suspicious parameters.
-- Basic timeline reconstruction from packet timestamps.
-
-## Skills Learned
-
-- How decoy scanning patterns can still expose the real attacker through traffic correlation.
-- How to confirm open ports from SYN and SYN-ACK behavior in packet captures.
-- How to identify web enumeration tools directly from HTTP headers.
-- How to trace file-read abuse and credential-targeting attempts in PCAP data.
-- How to solve forensics CTF questions methodically from one capture file.
-
 ---
-
 ## Artifacts Provided
 
 **File:** Net-Traffic.PCAP  

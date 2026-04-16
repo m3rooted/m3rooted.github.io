@@ -10,22 +10,6 @@ image:
 description: "My write-up for the BreizhCTF 2025 medium crypto challenge AutHentification 1, where I analyzed an AES-GCM misuse (fixed key/nonce and missing tag verification), treated it like a reusable stream cipher, recovered the keystream from a controllable user cookie, and forged a super_admin cookie to obtain the flag"
 ---
 
-## Skills Required
-
-- Basic understanding of symmetric cryptography (AES, nonce/IV, keystream).
-- Familiarity with AES-GCM and the role of authentication tag verification.
-- Understanding of CTR/stream-cipher XOR properties (ciphertext = plaintext XOR keystream).
-- Ability to exploit known/chosen-plaintext conditions.
-- Basic Python scripting for byte-wise XOR, JSON handling, and cookie forging.
-
-## Skills Learned
-
-- How AES-GCM misuse (fixed key/nonce + no tag check) enables practical forgery.
-- How to recover a reusable keystream from controlled plaintext-ciphertext pairs.
-- How to craft a forged cookie by injecting a custom JSON role (super_admin).
-- Why AEAD integrity checks are as critical as encryption itself.
-- How to automate the full exploit flow cleanly in a short solver script.
-
 ## Overview of the challenge
 
 In this challenge, we interact with a web application that stores an authentication token in a cookie named `auth`.

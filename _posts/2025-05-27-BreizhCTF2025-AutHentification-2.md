@@ -10,22 +10,6 @@ image:
 description: "My write-up for the BreizhCTF 2025 hard crypto challenge AutHentification 2, where I exploited a custom AES-GCM implementation bug (missing counter increment between encryption and tag generation), recovered the GHASH key in GF(2^128), forged a valid admin tag, and retrieved the flag"
 ---
 
-## Skills Required
-
-- Solid understanding of AES-GCM internals (GCTR, GHASH, tag construction).
-- Familiarity with finite-field arithmetic in $GF(2^{128})$.
-- Ability to model a cryptographic bug as algebraic equations.
-- Practical scripting skills with Sage + Python requests.
-- Comfort with cookie formatting/escaping edge cases in web apps.
-
-## Skills Learned
-
-- Why a single missing counter increment can break AEAD guarantees.
-- How nonce reuse + known plaintext still leaks a reusable keystream.
-- How to turn GHASH/tag equations into a polynomial root-finding problem.
-- How to recover $H$ and forge a valid GCM tag without knowing the AES key.
-- How to automate a full exploit chain end-to-end against a Flask app.
-
 ## Challenge Overview
 
 This challenge is the sequel to AutHentification 1.
