@@ -9,3 +9,5 @@ image:
 
 description: "My write-up for the Verilicious medium crypto challenge, where I analyzed information leaks in PKCS#1 v1.5 padding, translated the samples into a Hidden Number Problem (HNP) instance, and leveraged that to successfully recover the flag m"
 ---
+
+## Overview of the challenge
